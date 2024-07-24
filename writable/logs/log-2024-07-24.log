@@ -1,0 +1,57 @@
+WARNING - 2024-07-24 15:27:22 --> Routes file not found: "C:\xampp\htdocs\fs2024\ci4_hotel\app\Config/Routes.php"
+CRITICAL - 2024-07-24 15:38:27 --> ErrorException: Undefined array key "calle_avenida"
+[Method: GET, Route: clientes]
+in APPPATH\Views\clientes.php on line 47.
+ 1 APPPATH\Views\clientes.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "calle_avenida"', 'C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\clientes.php', 47)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('clientes', [], true)
+ 5 APPPATH\Controllers\ClientesController.php(11): view('clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 15:46:32 --> ErrorException: Undefined array key "contrasena"
+[Method: GET, Route: clientes]
+in APPPATH\Views\clientes.php on line 66.
+ 1 APPPATH\Views\clientes.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "contrasena"', 'C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\clientes.php', 66)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\clientes.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('clientes', [], true)
+ 5 APPPATH\Controllers\ClientesController.php(11): view('clientes', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 17:04:32 --> ErrorException: Undefined variable $cliente
+[Method: GET, Route: hoteles]
+in APPPATH\Views\hoteles.php on line 70.
+ 1 APPPATH\Views\hoteles.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cliente', 'C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\hoteles.php', 70)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\hoteles.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('hoteles', [], true)
+ 5 APPPATH\Controllers\HotelesController.php(11): view('hoteles', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-24 17:47:06 --> ErrorException: Undefined array key "calle_avenida"
+[Method: GET, Route: buscar_cliente/33]
+in APPPATH\Views\form_modificar_cliente.php on line 42.
+ 1 APPPATH\Views\form_modificar_cliente.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "calle_avenida"', 'C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\form_modificar_cliente.php', 42)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\xampp\\htdocs\\fs2024\\ci4_hotel\\app\\Views\\form_modificar_cliente.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_cliente', [], true)
+ 5 APPPATH\Controllers\ClientesController.php(45): view('form_modificar_cliente', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->buscarCliente('33')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
