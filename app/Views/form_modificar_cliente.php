@@ -10,15 +10,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
-<body>
-    <div class="container">
+<body class="bg-body-secondary">
+    <div class="container col-xl-3">
         <div class="row">
             <div class="col">
-                <h1>Modificar Cliente</h1>
+                <h1 class="text-center mt-2">Modificar Cliente</h1>
                 <form action="<?=base_url('modificar_cliente')?>" method="post">
-                    <div class="md-3">
+                    <div class="mb-3">
                         <label for="txtClienteId" class="form-label">Cliente Id</label>
-                        <input type="text" id="txtClienteId" name="txtClienteId" class="form-control"
+                        <input type="number" id="txtClienteId" name="txtClienteId" class="form-control"
                             placeholder="Ingrese id del cliente" value="<?=$datos['cliente_id'];?>" readonly>
                     </div>
                     <div class="mb-3">
@@ -33,17 +33,17 @@
                     </div>
                     <div class="mb-3">
                         <label for="txtNit" class="form-label">NIT</label>
-                        <input type="text" id="txtNit" name="txtNit" class="form-control" placeholder="Ingrese nit"
+                        <input type="number" id="txtNit" name="txtNit" class="form-control" placeholder="Ingrese nit"
                             value="<?=$datos['nit'];?>">
                     </div>
                     <div class="mb-3">
                         <label for="txtTelefono" class="form-label">Teléfono</label>
-                        <input type="text" id="txtTelefono" name="txtTelefono" class="form-control"
+                        <input type="number" id="txtTelefono" name="txtTelefono" class="form-control"
                             placeholder="Ingrese teléfono" value="<?=$datos['telefono'];?>">
                     </div>
                     <div class="mb-3">
                         <label for="txtCorreo" class="form-label">Correo electrónico</label>
-                        <input type="text" id="txtCorreo" name="txtCorreo" class="form-control"
+                        <input type="email" id="txtCorreo" name="txtCorreo" class="form-control"
                             placeholder="Ingrese correo" value="<?=$datos['correo_electronico'];?>">
                     </div>
                     <div class="mb-3">
@@ -53,11 +53,11 @@
                     </div>
                     <div class="mb-3">
                         <label for="txtContra" class="form-label">Contraseña</label>
-                        <input type="text" id="txtContra" name="txtContra" class="form-control"
+                        <input type="password" id="txtContra" name="txtContra" class="form-control"
                             placeholder="Ingrese contraseña" value="<?=$datos['contrasenia'];?>">
                     </div>
-                    <div class="mb-3">
-                        <input type="submit" class="btn btn-success form-control" value="Guardar cambios">
+                    <div class="mb-3 text-center">
+                        <input type="submit" class="btn btn-success form-control mt-2" value="Guardar cambios">
                     </div>
                 </form>
             </div>

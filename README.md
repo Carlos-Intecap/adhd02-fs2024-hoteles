@@ -12,4 +12,4 @@
 > El proyecto cuenta con 4 páginas: Inicio, clientes, hoteles y reservaciones.
 > El proyecto fue hecho con PHP, HTML, CSS (boostrap) y CodeIgniter 4.
 > La URL local utilizada es: 'http://localhost/fs2024/ci4_hotel/public/'.
-> La base de datos utilizada tiene el nombre: fs2024_hotel
+> La base de datos utilizada tiene el nombre: bd_hotel

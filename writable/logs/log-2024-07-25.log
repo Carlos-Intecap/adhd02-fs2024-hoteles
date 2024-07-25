@@ -1,0 +1,841 @@
+ERROR - 2024-07-25 14:01:07 --> mysqli_sql_exception: Duplicate entry 'inventavomod@gmail.com' for key 'correo_electronico' in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `cliente...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `cliente...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `cliente...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `cliente...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(59): CodeIgniter\Model->update('34', Array)
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->modificarCliente()
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-25 14:01:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'inventavomod@gmail.com' for key 'correo_electronico'
+[Method: POST, Route: modificar_cliente]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `cliente_id` = :cliente_id:, `nombre` = :nombre:, `apellido` = :apellido:, `nit` = :nit:, `telefono` = :telefono:, `correo_electronico` = :correo_electronico:, `direccion` = :direccion:, `contrasenia` = :contrasenia:
+WHERE `clientes`.`cliente_id` IN :clientes.cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ClientesController.php(59): CodeIgniter\Model->update('34', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->modificarCliente()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:01:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'inventavomod@gmail.com' for key 'correo_electronico'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `clientes` SET `cliente_id` = \'34\', `nombre` = \'Modificado\', `apellido` = \'Modificado\', `nit` = \'456\', `telefono` = \'41405509\', `correo_electronico` = \'inventavomod@gmail.com\', `direccion` = \'45av Zona 4\', `contrasenia` = \'789456\'
+WHERE `clientes`.`cliente_id` IN (\'34\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `clientes` SET `cliente_id` = \'34\', `nombre` = \'Modificado\', `apellido` = \'Modificado\', `nit` = \'456\', `telefono` = \'41405509\', `correo_electronico` = \'inventavomod@gmail.com\', `direccion` = \'45av Zona 4\', `contrasenia` = \'789456\'
+WHERE `clientes`.`cliente_id` IN (\'34\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `cliente_id` = :cliente_id:, `nombre` = :nombre:, `apellido` = :apellido:, `nit` = :nit:, `telefono` = :telefono:, `correo_electronico` = :correo_electronico:, `direccion` = :direccion:, `contrasenia` = :contrasenia:
+WHERE `clientes`.`cliente_id` IN :clientes.cliente_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\ClientesController.php(59): CodeIgniter\Model->update('34', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->modificarCliente()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:01:07 --> [Caused by] mysqli_sql_exception: Duplicate entry 'inventavomod@gmail.com' for key 'correo_electronico'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `clientes` SET `cliente_id` = \'34\', `nombre` = \'Modificado\', `apellido` = \'Modificado\', `nit` = \'456\', `telefono` = \'41405509\', `correo_electronico` = \'inventavomod@gmail.com\', `direccion` = \'45av Zona 4\', `contrasenia` = \'789456\'
+WHERE `clientes`.`cliente_id` IN (\'34\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `clientes` SET `cliente_id` = \'34\', `nombre` = \'Modificado\', `apellido` = \'Modificado\', `nit` = \'456\', `telefono` = \'41405509\', `correo_electronico` = \'inventavomod@gmail.com\', `direccion` = \'45av Zona 4\', `contrasenia` = \'789456\'
+WHERE `clientes`.`cliente_id` IN (\'34\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `clientes` SET `cliente_id` = \'34\', `nombre` = \'Modificado\', `apellido` = \'Modificado\', `nit` = \'456\', `telefono` = \'41405509\', `correo_electronico` = \'inventavomod@gmail.com\', `direccion` = \'45av Zona 4\', `contrasenia` = \'789456\'
+WHERE `clientes`.`cliente_id` IN (\'34\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `clientes` SET `cliente_id` = :cliente_id:, `nombre` = :nombre:, `apellido` = :apellido:, `nit` = :nit:, `telefono` = :telefono:, `correo_electronico` = :correo_electronico:, `direccion` = :direccion:, `contrasenia` = :contrasenia:
+WHERE `clientes`.`cliente_id` IN :clientes.cliente_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\ClientesController.php(59): CodeIgniter\Model->update('34', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->modificarCliente()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 14:09:05 --> mysqli_sql_exception: Duplicate entry 'hotelinventavo@gmail.com' for key 'correoelectronico' in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ho...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\HotelesController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-25 14:09:05 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'hotelinventavo@gmail.com' for key 'correoelectronico'
+[Method: POST, Route: agregar_hotel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:09:05 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'hotelinventavo@gmail.com' for key 'correoelectronico'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'102\', \'777\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'102\', \'777\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:09:05 --> [Caused by] mysqli_sql_exception: Duplicate entry 'hotelinventavo@gmail.com' for key 'correoelectronico'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'102\', \'777\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'102\', \'777\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'102\', \'777\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:30:15 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "form_modificar_hotel.php"
+[Method: GET, Route: buscar_hotel/21]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('form_modificar_hotel.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('form_modificar_hotel', [], true)
+ 3 APPPATH\Controllers\HotelesController.php(43): view('form_modificar_hotel', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->buscarHotel('21')
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:32:15 --> BadMethodCallException: Call to undefined method App\Models\HotelesModel::uptdate
+[Method: POST, Route: modificar_hotel]
+in SYSTEMPATH\Model.php on line 932.
+ 1 APPPATH\Controllers\HotelesController.php(57): CodeIgniter\Model->__call('uptdate', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->modificarHotel()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:32:40 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: modificar_hotel]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\HotelesController.php(57): CodeIgniter\Model->update('21')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->modificarHotel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:33:48 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: modificar_hotel]
+in SYSTEMPATH\BaseModel.php on line 1833.
+ 1 SYSTEMPATH\BaseModel.php(1833): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\BaseModel.php(997): CodeIgniter\BaseModel->transformDataToArray(null, 'update')
+ 3 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], null)
+ 4 APPPATH\Controllers\HotelesController.php(57): CodeIgniter\Model->update('21')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->modificarHotel()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 14:55:01 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ReservacionesController.php(28): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->agregarReservacion()
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-25 14:55:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`))
+[Method: POST, Route: agregar_reservacion]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (:reservacion_id:, :fecha:, :cliente_id:, :hotel_id:, :descripcion:, :usuario_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\ReservacionesController.php(28): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->agregarReservacion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:55:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (\'101\', \'2024-08-05\', \'32\', \'15\', \'5 personas\', \'\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (\'101\', \'2024-08-05\', \'32\', \'15\', \'5 personas\', \'\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (:reservacion_id:, :fecha:, :cliente_id:, :hotel_id:, :descripcion:, :usuario_id:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\ReservacionesController.php(28): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->agregarReservacion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 14:55:01 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (\'101\', \'2024-08-05\', \'32\', \'15\', \'5 personas\', \'\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (\'101\', \'2024-08-05\', \'32\', \'15\', \'5 personas\', \'\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (\'101\', \'2024-08-05\', \'32\', \'15\', \'5 personas\', \'\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `reservaciones` (`reservacion_id`, `fecha`, `cliente_id`, `hotel_id`, `descripcion`, `usuario_id`) VALUES (:reservacion_id:, :fecha:, :cliente_id:, :hotel_id:, :descripcion:, :usuario_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\ReservacionesController.php(28): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->agregarReservacion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 15:11:03 --> Error: Class "App\Controllers\ResrvacionesModel" not found
+[Method: POST, Route: modificar_reservacion]
+in APPPATH\Controllers\ReservacionesController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->modificarReservacion()
+ 2 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 3 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 15:11:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `reserva...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `reserva...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `reserva...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `reserva...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1028): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(865): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ReservacionesController.php(52): CodeIgniter\Model->update('101', Array)
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ReservacionesController->modificarReservacion()
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-25 15:11:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`))
+[Method: POST, Route: modificar_reservacion]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `reservaciones` SET `reservacion_id` = :reservacion_id:, `fecha` = :fecha:, `cliente_id` = :cliente_id:, `hotel_id` = :hotel_id:, `descripcion` = :descripcion:, `usuario_id` = :usuario_id:
+WHERE `reservaciones`.`reservacion_id` IN :reservaciones.reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 3 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 4 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 5 APPPATH\Controllers\ReservacionesController.php(52): CodeIgniter\Model->update('101', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->modificarReservacion()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 15:11:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `reservaciones` SET `reservacion_id` = \'101\', `fecha` = \'2024-07-27\', `cliente_id` = \'5\', `hotel_id` = \'3\', `descripcion` = \'5 personas\', `usuario_id` = \'101\'
+WHERE `reservaciones`.`reservacion_id` IN (\'101\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `reservaciones` SET `reservacion_id` = \'101\', `fecha` = \'2024-07-27\', `cliente_id` = \'5\', `hotel_id` = \'3\', `descripcion` = \'5 personas\', `usuario_id` = \'101\'
+WHERE `reservaciones`.`reservacion_id` IN (\'101\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `reservaciones` SET `reservacion_id` = :reservacion_id:, `fecha` = :fecha:, `cliente_id` = :cliente_id:, `hotel_id` = :hotel_id:, `descripcion` = :descripcion:, `usuario_id` = :usuario_id:
+WHERE `reservaciones`.`reservacion_id` IN :reservaciones.reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 5 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 6 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 7 APPPATH\Controllers\ReservacionesController.php(52): CodeIgniter\Model->update('101', [...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->modificarReservacion()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 15:11:27 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`fs2024_hotel`.`reservaciones`, CONSTRAINT `reservaciones_ibfk_2` FOREIGN KEY (`usuario_id`) REFERENCES `usuarios` (`usuario_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('UPDATE `reservaciones` SET `reservacion_id` = \'101\', `fecha` = \'2024-07-27\', `cliente_id` = \'5\', `hotel_id` = \'3\', `descripcion` = \'5 personas\', `usuario_id` = \'101\'
+WHERE `reservaciones`.`reservacion_id` IN (\'101\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `reservaciones` SET `reservacion_id` = \'101\', `fecha` = \'2024-07-27\', `cliente_id` = \'5\', `hotel_id` = \'3\', `descripcion` = \'5 personas\', `usuario_id` = \'101\'
+WHERE `reservaciones`.`reservacion_id` IN (\'101\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `reservaciones` SET `reservacion_id` = \'101\', `fecha` = \'2024-07-27\', `cliente_id` = \'5\', `hotel_id` = \'3\', `descripcion` = \'5 personas\', `usuario_id` = \'101\'
+WHERE `reservaciones`.`reservacion_id` IN (\'101\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2508): CodeIgniter\Database\BaseConnection->query('UPDATE `reservaciones` SET `reservacion_id` = :reservacion_id:, `fecha` = :fecha:, `cliente_id` = :cliente_id:, `hotel_id` = :hotel_id:, `descripcion` = :descripcion:, `usuario_id` = :usuario_id:
+WHERE `reservaciones`.`reservacion_id` IN :reservaciones.reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(461): CodeIgniter\Database\BaseBuilder->update()
+ 6 SYSTEMPATH\BaseModel.php(1028): CodeIgniter\Model->doUpdate([...], [...])
+ 7 SYSTEMPATH\Model.php(865): CodeIgniter\BaseModel->update([...], [...])
+ 8 APPPATH\Controllers\ReservacionesController.php(52): CodeIgniter\Model->update('101', [...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ReservacionesController->modificarReservacion()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ReservacionesController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 16:31:27 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`fs2024_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `cl...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cl...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cl...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cl...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-25 16:31:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`fs2024_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_cliente/32]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 16:31:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`fs2024_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 16:31:27 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`fs2024_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:16:27 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ho...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\HotelesController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-25 17:16:27 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`))
+[Method: POST, Route: agregar_hotel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:16:27 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'2\', \'777\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'2\', \'777\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:16:27 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'2\', \'777\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'2\', \'777\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'2\', \'777\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:16:39 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `ho...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `ho...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `ho...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `ho...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(840): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(802): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\HotelesController.php(31): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2024-07-25 17:16:39 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`))
+[Method: POST, Route: agregar_hotel]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:16:39 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'4\', \'777\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'4\', \'777\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:16:39 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`bd_hotel`.`hoteles`, CONSTRAINT `hoteles_ibfk_2` FOREIGN KEY (`categoria_id`) REFERENCES `categoria` (`categoria_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'4\', \'777\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'4\', \'777\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (\'28\', \'Hotel Nuevo\', \'hotelinventavo@gmail.com\', \'47002098\', \'50av, Zona 6\', \'4\', \'4\', \'777\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2332): CodeIgniter\Database\BaseConnection->query('INSERT INTO `hoteles` (`hotel_id`, `nombre`, `correoelectronico`, `telefono`, `direccion`, `ciudad_id`, `categoria_id`, `usuario_id`) VALUES (:hotel_id:, :nombre:, :correoelectronico:, :telefono:, :direccion:, :ciudad_id:, :categoria_id:, :usuario_id:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(840): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(802): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\HotelesController.php(31): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\HotelesController->agregarHotel()
+10 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\HotelesController))
+11 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:20:09 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `cl...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cl...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cl...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cl...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-25 17:20:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_cliente/32]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:20:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:20:09 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'32\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('32')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:20:35 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `cl...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cl...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cl...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cl...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-25 17:20:35 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_cliente/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:20:35 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:20:35 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ClientesController.php(39): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:24:08 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `cl...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cl...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cl...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cl...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(42): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-25 17:24:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_cliente/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ClientesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:24:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ClientesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:24:08 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ClientesController.php(42): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:35:40 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `re...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `re...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `re...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `re...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(41): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-25 17:35:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_cliente/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ClientesController.php(41): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:35:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ClientesController.php(41): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:35:40 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `reservaciones`
+WHERE `reservacion_id` IN :reservacion_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ClientesController.php(41): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2024-07-25 17:40:23 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`)) in C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `cl...', 0)
+#1 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `cl...')
+#2 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `cl...')
+#3 C:\xampp\htdocs\fs2024\ci4_hotel\system\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `cl...', Array, false)
+#4 C:\xampp\htdocs\fs2024\ci4_hotel\system\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+#5 C:\xampp\htdocs\fs2024\ci4_hotel\system\BaseModel.php(1158): CodeIgniter\Model->doDelete(Array, false)
+#6 C:\xampp\htdocs\fs2024\ci4_hotel\app\Controllers\ClientesController.php(45): CodeIgniter\BaseModel->delete(Array)
+#7 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+#8 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+#9 C:\xampp\htdocs\fs2024\ci4_hotel\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\fs2024\ci4_hotel\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\fs2024\ci4_hotel\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2024-07-25 17:40:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+[Method: GET, Route: eliminar_cliente/1]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 2 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 3 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 4 APPPATH\Controllers\ClientesController.php(45): CodeIgniter\BaseModel->delete([...])
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:40:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 4 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 5 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 6 APPPATH\Controllers\ClientesController.php(45): CodeIgniter\BaseModel->delete([...])
+ 7 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 8 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+ 9 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+12 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-07-25 17:40:23 --> [Caused by] mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`bd_hotel`.`detalle_reservacion`, CONSTRAINT `detalle_reservacion_ibfk_4` FOREIGN KEY (`reservacion_id`) REFERENCES `reservaciones` (`reservacion_id`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `clientes`
+WHERE `cliente_id` IN (\'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2835): CodeIgniter\Database\BaseConnection->query('DELETE FROM `clientes`
+WHERE `cliente_id` IN :cliente_id:', [...], false)
+ 5 SYSTEMPATH\Model.php(521): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(1158): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\ClientesController.php(45): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\ClientesController->eliminarCliente('1')
+ 9 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientesController))
+10 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

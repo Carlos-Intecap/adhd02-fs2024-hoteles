@@ -38,7 +38,7 @@
 
         <h1 class="text-center mt-2">Reservaciones</h1>
 
-        <a href="nuevo_cliente" class="btn btn-success"><i class="bi-plus-circle"></i> Nueva reservacion</a>
+        <a href="nueva_reservacion" class="btn btn-success"><i class="bi-plus-circle"></i> Nueva reservacion</a>
         <table class="table table-border table-striped">
             <thead>
                 <tr>

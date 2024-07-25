@@ -52,7 +52,7 @@ class ClientesController extends BaseController
             'nit'=>$this->request->getVar('txtNit'),
             'telefono'=>$this->request->getVar('txtTelefono'),
             'correo_electronico'=>$this->request->getVar('txtCorreo'),
-            'direccion'=>$this->request->getVar('txtContra'),
+            'direccion'=>$this->request->getVar('txtDireccion'),
             'contrasenia'=>$this->request->getVar('txtContra')
         ];
         $clientes = new ClientesModel();

@@ -43,7 +43,7 @@
                 <input type="password" id="txtContra" name="txtContra" class="form-control" placeholder="Ingrese contraseña">
             </div>
             <div class="mb-8 text-center">
-                <input type="submit" class="btn btn-success mt-2" value="Guardar" id="btGuardar" name="btnGuardar">
+                <input type="submit" class="btn btn-success form-control mt-2" value="Guardar" id="btGuardar" name="btnGuardar">
             </div>
         </form>
     </div>
